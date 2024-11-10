@@ -1,4 +1,6 @@
-## Hi there 👋
+## Robert C Mills 
+
+# Public Repository for all artifacts created in pursuit of Data Engineering Certificate from MIT xPRO
 
 <!--
 **RCMills/RCMills** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

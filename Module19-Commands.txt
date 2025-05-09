@@ -1,0 +1,27 @@
+Module 19 commands:
+
+Hadoop containers on docker built to work together
+
+https://github.com/big-data-europe
+
+hub.docker.com/bitnami/spark
+
+curl -LO https://raw.githubusercontent.com/bitnami-docker-spark/master/docker-compose.yml
+
+curl -O https://raw.githubusercontent.com/bitnami/containers/main/bitnami/APP/docker-compose.yml > docker-compose.yml
+docker-compose up -d
+
+curl --ssl-revoke-best-effort https://raw.githubusercontent.com/bitnami/containers/main/bitnami/APP/docker-compose.yml > docker-compose.yml
+
+curl --ssl-revoke-best-effort https://raw.githubusercontent.com/bitnami/containers/main/bitnami/spark/docker-compose.yml -o docker-compose.yml -- this worked to download the docker-compose file 
+
+Then running the docker-compose up -- this worked to create both containers
+
+-- to get pyspark to run in the container,.. run this entire command sequence
+export PYTHONPATH=/opt/bitnami/spark/python/lib/py4j-0.10.9.7-src.zip:/opt/bitnami/spark/python/:/opt/bitnami/spark/python/:
+export PYTHONSTARTUP=/opt/bitnami/spark/python/pyspark/shell.py
+exec "${SPARK_HOME}"/bin/spark-submit pyspark-shell-main
+
+
+
+
